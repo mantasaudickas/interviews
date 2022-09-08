@@ -20,6 +20,26 @@ namespace WeatherStation.Migrations
                 {
                     table.PrimaryKey("PK_WeatherStations", x => x.WeatherStationId);
                 });
+
+            migrationBuilder.InsertData(
+                "WeatherStations",
+                new[] { "WeatherStationId", "Name" },
+                new object[] { Guid.NewGuid(), "Vilnius" });
+
+            migrationBuilder.InsertData(
+                "WeatherStations",
+                new[] { "WeatherStationId", "Name" },
+                new object[] { Guid.NewGuid(), "Kaunas" });
+
+            migrationBuilder.InsertData(
+                "WeatherStations",
+                new[] { "WeatherStationId", "Name" },
+                new object[] { Guid.NewGuid(), "Zarasai" });
+
+            migrationBuilder.InsertData(
+                "WeatherStations",
+                new[] { "WeatherStationId", "Name" },
+                new object[] { Guid.NewGuid(), "Klaipėda" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
